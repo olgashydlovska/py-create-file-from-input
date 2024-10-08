@@ -31,8 +31,5 @@ def main() -> None:
         print(f"# {line}")
 
 
-main()
-
-
 if __name__ == "__main__":
     main()
