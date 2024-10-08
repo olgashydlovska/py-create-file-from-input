@@ -25,7 +25,7 @@ def main() -> None:
             file.write(line + "\n")
 
     # Inform the user that the file has been created
-    print(f"# File name: \"{file_name_with_extension}\"")
+    print(f'# File name: "{file_name_with_extension}"')
     print("# File content:")
     for line in content_lines:
         print(f"# {line}")
