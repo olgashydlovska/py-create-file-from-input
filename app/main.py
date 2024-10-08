@@ -1,26 +1,34 @@
 def main() -> None:
-    # Get the file name from the user
+    # Ask the user for the file name
     file_name = input("Enter name of the file: ")
 
-    # Ensure the file has a .txt extension
-    if not file_name.endswith(".txt"):
-        file_name += ".txt"
+    # Append '.txt' extension to the file name
+    file_name_with_extension = file_name + ".txt"
 
+    # Initialize an empty list to hold the file content
     content_lines = []
 
-    # Keep asking for new lines of content
+    # Loop to collect lines of content from the user
     while True:
-        new_line = input("Enter new line of content: ")
-        if new_line.lower() == "stop":
+        line = input("Enter new line of content: ")
+
+        # Stop collecting lines if the user enters 'stop'
+        if line.lower() == "stop":
             break
-        content_lines.append(new_line)
+
+        # Add the line to the list
+        content_lines.append(line)
 
     # Write the collected content to the file
-    with open(file_name, "w") as file:
+    with open(file_name_with_extension, "w") as file:
         for line in content_lines:
             file.write(line + "\n")
 
-    print(f'File "{file_name}" has been created.')
+    # Inform the user that the file has been created
+    print(f"# File name: \"{file_name_with_extension}\"")
+    print("# File content:")
+    for line in content_lines:
+        print(f"# {line}")
 
 
 main()
