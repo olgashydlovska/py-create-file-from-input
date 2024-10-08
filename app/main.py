@@ -22,8 +22,6 @@ def main() -> None:
 
     print(f'File "{file_name}" has been created.')
 
-    # Run the function to create the file
-
 
 main()
 
